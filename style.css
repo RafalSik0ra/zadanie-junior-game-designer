@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: green;
+}
+
+/* wspolny styl obramowania dla klasy box */
+.border{
+    border-style: solid;
+    border-width: 4px;
+    border-color: black;
+}
+
+/* Utworzenie siatki dla elementów */
+.grid {
+    display:grid;
+    height:100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 5% 1fr;
+    grid-template-areas:
+        'header header header'
+        'square-container rectangle-container text-container'
+    ;
+}
+
+.header{
+    grid-area: header;
+    background-color: brown;
+}
+.squares-container{
+    grid-area: square-container;
+}
+.rectangle-container{
+    grid-area: rectangle-container;
+}
+.text-container{
+    grid-area: text-container;
+}
