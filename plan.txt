@@ -1,0 +1,28 @@
+Renovation goals:
+- painting the walls
+- replacement of an old desk and the chair
+- installation of led strip and new power sockets
+
+1. Preparation:
+	1) remove furnitures and decorations for clear work space
+	2) cover floor and objects with a foil inside the room
+	3) tape the edges of wall connecting ceiling and floor
+	4) turn off power supply
+2. Cable routes:
+	1) mark the planned cable routes and socket spots on the wall
+	2) chase wall accordingly to marked routes
+	3) pull the cables through chase, reserve enough cable for sockets and led strip
+	4) use putty to fill the chase
+3. Wall painting:
+	1) use putty to fix remaining cracks in the walls
+	2) clean the walls from dust
+	3) paint the walls
+4. Installation:
+	1) install power sockets
+	2) install led strips
+	3) turn on power supply and test newly added components
+5. Final touches:
+	1) remove the foil and a tape 
+	2) clear the rest of the room
+	3) move back the furnitures
+	4) assembly new desk and chair
