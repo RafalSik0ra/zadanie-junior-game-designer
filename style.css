@@ -25,7 +25,7 @@ body{
 
 .header{
     grid-area: header;
-    background-color: brown;
+    background-color: #808000;
 }
 .squares-container{
     grid-area: square-container;
@@ -86,7 +86,7 @@ body{
     top:0;
 }
 .circle{
-    background-color: aquamarine;
+    background-color: #008080;
     grid-area:circle;
     width:100px;
     aspect-ratio: 1/1;
@@ -95,7 +95,7 @@ body{
 }
 .text-box{
     position: relative;
-    background-color: wheat;
+    background-color: white;
     height:100%;
     width:100%
 }
@@ -132,6 +132,6 @@ body{
         ;
     }
     .text-box{
-        background-color: blue;
+        background-color: #c83737;
     }
 }
