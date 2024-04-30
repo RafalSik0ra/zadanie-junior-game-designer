@@ -11,7 +11,13 @@ body{
     border-color: black;
 }
 
-/* Utworzenie siatki dla elementów */
+/* Utworzenie siatki 3x2 dla elementów:
+'header' - nagłówek
+'square-container' - div zawierający kwadraty
+'rectangle-container' - div zawierajacy 2 prostokaty z kwadratem
+'text-container' - div zawierajacy tekst "ABC"
+*/
+
 .grid {
     display:grid;
     height:100vh;
@@ -38,13 +44,16 @@ body{
     grid-area: text-container;
     margin:5% 5% 5% 20%;
 }
-.square{
+
+/* div inline-block sluzacy jako wrapper do ulozenia kwadratow oraz obrocenia ich o 45 stopni */
+.square{ 
     display: inline-block;
     position: absolute;
     top:2%;
     left:15%;
     transform: rotate(45deg);
 }
+
 .squares{
     background-color: red;
     width: 100px;
@@ -56,7 +65,9 @@ body{
 #square2{
     margin-top:10%
 }
-.content-grid{
+
+/* div grid sluzacy do prawidlowego rozmieszczenie elementów w siatce i zachowania proporcji miedzy nimi */
+.content-grid{ 
     display:grid;
     position:relative;
     align-items: center;
@@ -77,6 +88,8 @@ body{
     margin-left: 5px;
     position: absolute;
 }
+
+/* Ulozenie prostokatów wzgledem polozenia siatki */
 #rectangle1{
     grid-area: rectangle1;
     bottom:0
@@ -106,6 +119,7 @@ body{
     font-size: 34px;
 }
 
+/* Zmiana siatki dla rozdzielczosci mniejszej niz 583px */
 @media (width < 583px){
     .grid{
         grid-template-columns: 1fr;
@@ -121,6 +135,8 @@ body{
         background-color: blue;
     }
 }
+
+/* Zmiana siatki dla rozdzielczosci wiekszej badz rownej niz 583px i wiekszej badz rownej 900px*/
 @media (583px <= width <= 900px){
     .grid{
         grid-template-columns: 1fr 1fr;
@@ -134,4 +150,49 @@ body{
     .text-box{
         background-color: #c83737;
     }
+}
+
+/* Animacja obrotu kwadratow */
+.squares{
+    animation: rotation 1.5s infinite;
+}
+@keyframes rotation {
+    100%{transform: rotate(90deg);}
+
+}
+
+/* Animacja zamiany miejsc prostokatow */
+#rectangle1{
+    animation: MoveY1 3s infinite
+}
+#rectangle2{
+    animation: MoveY2 3s infinite
+}
+@keyframes MoveY1{
+    0%{transform: translateY(0px);}
+    50%{transform: translateY(60px);}
+    100%{transform: translateY(0px);}
+} 
+@keyframes MoveY2{
+    0%{transform: translateY(0px);}
+    50%{transform: translateY(-60px);}
+    100%{transform: translateY(0px);}
+} 
+
+/*Animacja zmiany skali kola */
+.circle{
+    animation: resize 3s infinite;
+}
+@keyframes resize{
+    50% {transform: scale(1.2);}
+    100% {transform: scale(1);}
+}
+
+/* Animacja migania tekstu */
+.text-box > h1{
+    animation: text-blink 2.5s infinite;
+}
+@keyframes text-blink{
+    50% {opacity: 0;}
+    100%{opacity: 1;}
 }
