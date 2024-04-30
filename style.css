@@ -29,10 +29,109 @@ body{
 }
 .squares-container{
     grid-area: square-container;
+    position: relative;
 }
 .rectangle-container{
     grid-area: rectangle-container;
 }
 .text-container{
     grid-area: text-container;
+    margin:5% 5% 5% 20%;
+}
+.square{
+    display: inline-block;
+    position: absolute;
+    top:2%;
+    left:15%;
+    transform: rotate(45deg);
+}
+.squares{
+    background-color: red;
+    width: 100px;
+    aspect-ratio: 1/1;
+}
+#square1{
+    margin-bottom: 10%;
+}
+#square2{
+    margin-top:10%
+}
+.content-grid{
+    display:grid;
+    position:relative;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        'rectangle1 circle'
+        'rectangle2 circle'
+    ;
+    height:50%;
+    row-gap: 20px;
+}
+.rectangle{
+    background-color: blue;
+    width:90%;
+    display:block;
+    height:30px;
+    margin-left: 5px;
+    position: absolute;
+}
+#rectangle1{
+    grid-area: rectangle1;
+    bottom:0
+}
+#rectangle2{
+    grid-area: rectangle2;
+    top:0;
+}
+.circle{
+    background-color: aquamarine;
+    grid-area:circle;
+    width:100px;
+    aspect-ratio: 1/1;
+    margin:10%;
+    border-radius:50%
+}
+.text-box{
+    position: relative;
+    background-color: wheat;
+    height:100%;
+    width:100%
+}
+.text-box > h1{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 34px;
+}
+
+@media (width < 583px){
+    .grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 5% 35% 10% 50%;
+        grid-template-areas: 
+            'header'
+            'square-container' 
+            'rectangle-container'
+            'text-container'
+        ;
+    }
+    .text-box{
+        background-color: blue;
+    }
+}
+@media (583px <= width <= 900px){
+    .grid{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 5% 1fr 1fr;
+        grid-template-areas: 
+            'header header'
+            'square-container text-container' 
+            'rectangle-container text-container'
+        ;
+    }
+    .text-box{
+        background-color: blue;
+    }
 }
